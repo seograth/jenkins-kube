@@ -176,7 +176,7 @@ controller:
   # If you set this prefix and use ingress controller, then you might want to set the ingress path below
   # I.e., "/jenkins"
   # -- Root URI Jenkins will be served on
-  jenkinsUriPrefix:
+  jenkinsUriPrefix: "/jenkins"
 
   # -- Enable pod security context (must be `true` if podSecurityContextOverride, runAsUser or fsGroup are set)
   usePodSecurityContext: true
@@ -717,6 +717,12 @@ controller:
     # -- Ingress path
     path: "/jenkins"
     pathType: Prefix
+
+    backendconfig: 
+      service:
+        name: jenkins
+        port: 
+          number: 8080
 
     # configures the hostname e.g. jenkins.example.com
     # -- Ingress hostname
