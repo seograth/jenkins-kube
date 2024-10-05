@@ -951,7 +951,7 @@ agent:
   waitForPodSec: 600
   # -- Namespace in which the Kubernetes agents should be launched
   namespace:
-  # -- Custom Pod labels (an object with `label-key: label-value` pairs)
+    jenkins
   podLabels: {}
   # -- Custom registry used to pull the agent jnlp image from
   jnlpregistry:
