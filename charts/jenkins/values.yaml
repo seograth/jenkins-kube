@@ -930,7 +930,7 @@ agent:
 
   # For connecting to the Jenkins controller
   # -- Overrides the Kubernetes Jenkins URL
-  jenkinsUrl:
+  jenkinsUrl: "http://jenkins.jenkins.svc.cluster.local:8080"
 
   # connects to the specified host and port, instead of connecting directly to the Jenkins controller
   # -- Overrides the Kubernetes Jenkins tunnel
@@ -949,9 +949,8 @@ agent:
   retentionTimeout: 5
   # -- Seconds to wait for pod to be running
   waitForPodSec: 600
-  # -- Namespace in which the Kubernetes agents should be launched
-  namespace:
-    jenkins
+  # -- Namespace in which the Kubernetes agents should be jenkinsUrl
+  namespace: "jenkins"
   podLabels: {}
   # -- Custom registry used to pull the agent jnlp image from
   jnlpregistry:
